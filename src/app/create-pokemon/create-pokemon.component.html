@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit($event)">
+<form>
   <input
     type="text"
     placeholder="Id"
@@ -17,5 +17,5 @@
     [(ngModel)]="pokemon.typeOfPokemon"
     name="tipoPokemon"
   />
-  <button>Crear Pokemon</button>
+  <button (click)="saveInfo()">Crear Pokemon</button>
 </form>

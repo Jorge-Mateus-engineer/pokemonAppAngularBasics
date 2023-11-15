@@ -22,6 +22,7 @@ col:nth-child(5) {
 
 .head th {
   background-color: var(--main-color);
+  color: azure;
   padding: 1rem 0;
   padding: 1rem;
 }

@@ -12,9 +12,10 @@ export class CreatePokemonComponent {
 
   constructor(private pokemonService: PokemonService) {}
 
-  onSubmit(event: Event): void {
-    event.preventDefault();
-    console.log(event);
+  saveInfo(): void {
     this.pokemonService.addPokemon(this.pokemon);
+    document.querySelectorAll('input').forEach((input) => {
+      input.value = '';
+    });
   }
 }
