@@ -1,0 +1,27 @@
+<table>
+  <colgroup>
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+  </colgroup>
+  <thead>
+    <tr class="head">
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Imagen</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pokemon of pokemonList">
+      <td>{{ pokemon.id }}</td>
+      <td>{{ pokemon.name }}</td>
+      <td>{{ pokemon.typeOfPokemon }}</td>
+      <td>{{ pokemon.imgUrl }}</td>
+      <td>''</td>
+    </tr>
+  </tbody>
+</table>

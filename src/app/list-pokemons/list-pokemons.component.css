@@ -1,0 +1,43 @@
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 2rem;
+  text-align: left;
+  margin: 3rem;
+}
+
+col:nth-child(1) {
+  width: 8rem;
+}
+
+col:nth-child(2) {
+  width: 20rem;
+}
+
+col:nth-child(3),
+col:nth-child(4),
+col:nth-child(5) {
+  width: 22rem;
+}
+
+.head th {
+  background-color: var(--main-color);
+  padding: 1rem 0;
+  padding: 1rem;
+}
+
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+tr:nth-child(2n) {
+  background-color: var(--main-color-tint);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--main-color-tint2);
+}
+
+td {
+  padding: 1rem;
+}

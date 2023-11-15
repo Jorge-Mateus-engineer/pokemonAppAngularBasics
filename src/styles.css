@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color: #2b6db6;
+  --main-color-tint: #bfd3e9;
+  --main-color-tint2: #eaf0f8;
+  --grey-color: #00002a;
+  --grey-color-tint: #4d4d6a;
+  --accent-color: #ffcc01;
+  --accent-color-tint: #ffe067;
+  --accent-color-shade: #e6b801;
+  --box-focus: rgba(43, 107, 181, 0.5);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Nunito", sans-serif;
+  color: var(--grey-color);
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem var(--box-focus);
+}
