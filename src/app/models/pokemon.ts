@@ -1,11 +1,10 @@
 export class Pokemon {
-  id: number;
+  id: number | undefined;
   name: string;
   typeOfPokemon: string;
   imgUrl: string;
 
   constructor() {
-    this.id = 0;
     this.name = '';
     this.typeOfPokemon = '';
     this.imgUrl = '';

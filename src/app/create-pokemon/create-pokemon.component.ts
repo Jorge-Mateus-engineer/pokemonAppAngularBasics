@@ -14,8 +14,10 @@ export class CreatePokemonComponent {
 
   saveInfo(): void {
     this.pokemonService.addPokemon(this.pokemon);
-    document.querySelectorAll('input').forEach((input) => {
-      input.value = '';
-    });
+    //No se deben usar metodos del Document, es un anti patron
+    // document.querySelectorAll('input').forEach((input) => {
+    //   input.value = '';
+    // });
+    this.pokemon = new Pokemon();
   }
 }
