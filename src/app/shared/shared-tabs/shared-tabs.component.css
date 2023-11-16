@@ -1,0 +1,38 @@
+.nav-container {
+  display: flex;
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 25rem;
+  padding: 0.5rem 2rem;
+  transition: all 0.4s;
+}
+
+.nav-tab:hover {
+  cursor: pointer;
+  background-color: var(--main-color-tint2);
+  text-decoration: underline;
+}
+
+.active {
+  border-bottom: 2px solid var(--main-color);
+}
+
+.nav-icon-container {
+  height: 3rem;
+  width: 3rem;
+}
+
+.nav-icon-container svg {
+  height: 100%;
+  width: auto;
+  stroke: var(--grey-color);
+}
+
+.nav-text {
+  color: var(--grey-color);
+  font-size: 2rem;
+}

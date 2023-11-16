@@ -1,0 +1,10 @@
+<nav class="nav-container">
+  <div
+    class="nav-tab"
+    *ngFor="let tab of tabs; let i = index"
+    [class.active]="i === 0"
+  >
+    <div class="nav-icon-container" [innerHTML]="tab.icon"></div>
+    <p class="nav-text">{{ tab.text }}</p>
+  </div>
+</nav>
