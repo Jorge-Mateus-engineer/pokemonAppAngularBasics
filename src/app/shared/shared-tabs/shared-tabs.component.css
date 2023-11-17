@@ -8,7 +8,11 @@
   gap: 2rem;
   width: 25rem;
   padding: 0.5rem 2rem;
-  transition: all 0.4s;
+  transition: background-color 0.4s;
+}
+
+.nav-tab:focus {
+  box-shadow: none;
 }
 
 .nav-tab:hover {

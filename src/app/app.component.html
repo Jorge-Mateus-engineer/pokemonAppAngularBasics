@@ -1,4 +1,4 @@
-<app-create-pokemon></app-create-pokemon>
-<app-list-pokemons></app-list-pokemons>
 <app-shared-tabs></app-shared-tabs>
-<router-outlet></router-outlet>
+<main [@routeAnimations]="prepareOutlet(outlet)" class="content">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>

@@ -21,3 +21,8 @@ html {
   outline: none;
   box-shadow: 0 0 0 0.4rem var(--box-focus);
 }
+
+main {
+  text-align: center;
+  position: relative;
+}

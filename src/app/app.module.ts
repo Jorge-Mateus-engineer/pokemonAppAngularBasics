@@ -7,10 +7,21 @@ import { ListPokemonsComponent } from './list-pokemons/list-pokemons.component';
 import { CreatePokemonComponent } from './create-pokemon/create-pokemon.component';
 import { FormsModule } from '@angular/forms';
 import { SharedTabsComponent } from './shared/shared-tabs/shared-tabs.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, ListPokemonsComponent, CreatePokemonComponent, SharedTabsComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    ListPokemonsComponent,
+    CreatePokemonComponent,
+    SharedTabsComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
