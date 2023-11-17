@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Pokemon } from '../models/pokemon';
 import { PokemonService } from '../services/pokemon.service';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-pokemon',
@@ -20,7 +21,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class CreatePokemonComponent {
   pokemon: Pokemon = new Pokemon();
 
-  constructor(private pokemonService: PokemonService) {}
+  constructor(private pokemonService: PokemonService, private router: Router) {}
 
   saveInfo(): void {
     this.pokemonService.addPokemon(this.pokemon);
@@ -29,5 +30,10 @@ export class CreatePokemonComponent {
     //   input.value = '';
     // });
     this.pokemon = new Pokemon();
+    this.navigateTo('/listPokemons');
+  }
+
+  private navigateTo(route: string): void {
+    this.router.navigate([route]);
   }
 }

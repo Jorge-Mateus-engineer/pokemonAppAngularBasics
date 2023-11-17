@@ -3,7 +3,6 @@ table {
   table-layout: fixed;
   font-size: 2rem;
   text-align: left;
-  margin: 3rem;
 }
 
 col:nth-child(1) {
@@ -22,7 +21,7 @@ col:nth-child(5) {
 
 .head th {
   background-color: var(--main-color);
-  color: azure;
+  color: white;
   padding: 1rem 0;
   padding: 1rem;
 }

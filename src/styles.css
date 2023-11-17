@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --main-color: #0e4380;
-  --main-color-tint: #9fb4cc;
-  --main-color-tint2: #e7ecf2;
+  --main-color: #fe1b1b;
+  --main-color-tint: #ffbbbb;
+  --main-color-tint2: #ffe8e8;
   --grey-color: #00002a;
   --grey-color-tint: #4d4d6a;
   --accent-color: #ffcc01;
   --accent-color-tint: #ffe067;
   --accent-color-shade: #e6b801;
-  --box-focus: rgba(43, 107, 181, 0.5);
+  --box-focus: rgba(254, 27, 27, 0.5);
 }
 
 html {
@@ -23,6 +23,15 @@ html {
 }
 
 main {
+  height: calc(100vh - 10rem);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  width: 90rem;
+  height: 100%;
   position: relative;
 }

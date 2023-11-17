@@ -15,10 +15,10 @@ export const fader = trigger('routeAnimations', [
       [
         style({
           position: 'absolute',
+          top: 0,
           left: 0,
-          width: '100%',
           opacity: 0,
-          transform: 'scale(0) translateY(100%)',
+          transform: 'scale(0)',
         }),
       ],
       { optional: true }
@@ -27,10 +27,10 @@ export const fader = trigger('routeAnimations', [
       ':enter',
       [
         animate(
-          '600ms ease',
+          '500ms',
           style({
             opacity: 1,
-            transform: 'scale(1) translateY(0)',
+            transform: 'scale(1)',
           })
         ),
       ],

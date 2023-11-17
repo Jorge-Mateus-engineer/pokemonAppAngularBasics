@@ -1,4 +1,6 @@
 <app-shared-tabs></app-shared-tabs>
-<main [@routeAnimations]="prepareOutlet(outlet)" class="content">
-  <router-outlet #outlet="outlet"></router-outlet>
+<main [@routeAnimations]="prepareOutlet(outlet)">
+  <div class="main-container">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
 </main>

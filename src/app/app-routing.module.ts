@@ -7,12 +7,12 @@ const routes: Routes = [
   {
     path: 'listPokemons',
     component: ListPokemonsComponent,
-    data: { animation: 'isRight' },
+    data: { animation: 'isLeft' },
   },
   {
     path: 'addPokemons',
     component: CreatePokemonComponent,
-    data: { animation: 'isLeft' },
+    data: { animation: 'isRight' },
   },
 ];
 
