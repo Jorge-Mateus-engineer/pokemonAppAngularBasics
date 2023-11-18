@@ -3,6 +3,7 @@
   --main-color: #fe1b1b;
   --main-color-tint: #ffbbbb;
   --main-color-tint2: #ffe8e8;
+  --main-color-shade: #df1818;
   --grey-color: #00002a;
   --grey-color-tint: #4d4d6a;
   --accent-color: #ffcc01;
@@ -34,4 +35,6 @@ main {
   width: 90rem;
   height: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
 }

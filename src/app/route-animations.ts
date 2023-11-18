@@ -16,9 +16,9 @@ export const fader = trigger('routeAnimations', [
         style({
           position: 'absolute',
           top: 0,
-          left: 0,
+          // left: 0,
           opacity: 0,
-          transform: 'scale(0)',
+          transform: 'scale(0.2)',
         }),
       ],
       { optional: true }
@@ -27,7 +27,7 @@ export const fader = trigger('routeAnimations', [
       ':enter',
       [
         animate(
-          '500ms',
+          '400ms',
           style({
             opacity: 1,
             transform: 'scale(1)',

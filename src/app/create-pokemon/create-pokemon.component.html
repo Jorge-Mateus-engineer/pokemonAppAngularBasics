@@ -3,21 +3,25 @@
     <img src="../../assets/img/Pikachu.png" />
   </div>
   <form>
+    <h2>¡Ingresa tu Pokemón a la lista!</h2>
+    <label>Id</label>
     <input
       type="text"
-      placeholder="Id"
+      placeholder="1"
       [(ngModel)]="pokemon.id"
       name="idPokemon"
     />
+    <label>Nombre de tu Pokemón</label>
     <input
       type="text"
-      placeholder="Nombre del Pokemon"
+      placeholder="Charmander"
       [(ngModel)]="pokemon.name"
       name="nombrePokemon"
     />
+    <label>Tipo del Pokemón</label>
     <input
       type="text"
-      placeholder="Tipo del Pokemon"
+      placeholder="Fuego"
       [(ngModel)]="pokemon.typeOfPokemon"
       name="tipoPokemon"
     />

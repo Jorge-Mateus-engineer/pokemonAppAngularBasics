@@ -31,6 +31,8 @@ export class CreatePokemonComponent {
     // });
     this.pokemon = new Pokemon();
     this.navigateTo('/listPokemons');
+
+    localStorage.setItem('activeIndex', JSON.stringify({ index: 0 }));
   }
 
   private navigateTo(route: string): void {

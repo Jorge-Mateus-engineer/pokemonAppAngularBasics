@@ -1,24 +1,41 @@
 .container {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  border: 2px solid var(--grey-color);
+  background-color: var(--main-color-tint2);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 12px 9px 26px -5px rgba(0, 0, 0, 0.2);
   /* justify-content: space-around; */
 }
 
 .img-container {
   height: 40rem;
   width: auto;
-  border-radius: 15px;
-  overflow: hidden;
+}
+
+h2 {
+  padding-bottom: 1rem;
+  font-size: 2rem;
 }
 
 img {
   height: 100%;
 }
+
 form {
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
+  padding: 2rem;
+}
+
+label {
+  color: var(--grey-color);
+  font-size: 1.5rem;
+  align-self: flex-start;
+  font-weight: 600;
 }
 
 input {
@@ -27,13 +44,13 @@ input {
   height: 2rem;
   border-radius: 5px;
   border: 1px solid var(--grey-color-tint);
-  background-color: var(--main-color-tint2);
+  background-color: var(--main-color-tint);
   padding: 1rem;
   font-family: inherit;
 }
 
 ::-webkit-input-placeholder {
-  color: var(--grey-color-tint);
+  color: var(--grey-color);
   opacity: 0.7;
 }
 
@@ -44,7 +61,7 @@ button {
   padding: 1rem;
   border-radius: 5px;
   border: 1px solid var(--grey-color);
-  background-color: var(--main-color-tint);
+  background-color: var(--main-color);
   color: var(--grey-color);
   font-weight: 600;
   font-family: inherit;
@@ -54,6 +71,6 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: var(--main-color);
+  background-color: var(--main-color-shade);
   color: white;
 }

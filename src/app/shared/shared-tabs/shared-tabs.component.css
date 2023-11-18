@@ -51,6 +51,13 @@
 }
 
 /*POKEBALL ICON STYLES*/
+.pokeball-icon {
+  transition: all 0.4s;
+}
+
+.pokeball-icon:hover {
+  transform: scale(1.5) rotate(360deg);
+}
 
 .st0 {
   fill: #ffffff;

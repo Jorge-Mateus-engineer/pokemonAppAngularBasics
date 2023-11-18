@@ -6,12 +6,7 @@ import { fader } from './route-animations';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations: [
-    // slider,
-    // transformer,
-    fader,
-    // stepper
-  ],
+  animations: [fader],
 })
 export class AppComponent {
   title = 'my-app';

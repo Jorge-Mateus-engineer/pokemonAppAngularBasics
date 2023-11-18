@@ -17,10 +17,16 @@ interface Tab {
 export class SharedTabsComponent {
   constructor(private sanitizer: DomSanitizer, private router: Router) {}
 
-  activeTabIndex: number = 0;
+  activeTabIndex: number = localStorage.getItem('activeIndex')
+    ? JSON.parse(localStorage.getItem('activeIndex')!).index
+    : 0;
 
   setActiveTab(index: number) {
     this.activeTabIndex = index;
+    localStorage.setItem(
+      'activeIndex',
+      JSON.stringify({ index: this.activeTabIndex })
+    );
   }
 
   tabs: Tab[] = [
