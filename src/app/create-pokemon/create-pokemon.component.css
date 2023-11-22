@@ -69,7 +69,8 @@ button {
   transition: all 0.4s;
 }
 
-button:hover {
+button:hover,
+button:focus {
   cursor: pointer;
   background-color: var(--main-color-shade);
   color: white;

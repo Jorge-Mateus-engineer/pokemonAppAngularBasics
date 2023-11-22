@@ -10,6 +10,7 @@
       placeholder="1"
       [(ngModel)]="pokemon.id"
       name="idPokemon"
+      (ngModelChange)="pokemon.id = $event && +$event"
     />
     <label>Nombre de tu Pokemón</label>
     <input

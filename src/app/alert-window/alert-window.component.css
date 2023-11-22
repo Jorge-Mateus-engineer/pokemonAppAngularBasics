@@ -1,0 +1,17 @@
+div {
+  z-index: 4;
+  width: 60rem;
+  height: 30rem;
+  background-color: var(--main-color-tint2);
+  border: 2px solid var(--grey-color);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+  display: none;
+}
+
+h2 {
+  font-size: 2rem;
+}

@@ -1,3 +1,7 @@
+<div *ngIf="pokemonEdit != null">
+  <app-edit-pokemon [pokemonToEdit]="pokemonEdit"></app-edit-pokemon>
+</div>
+
 <table>
   <colgroup>
     <col />
@@ -21,7 +25,7 @@
       <td>{{ pokemon.name }}</td>
       <td>{{ pokemon.typeOfPokemon }}</td>
       <td>{{ pokemon.imgUrl }}</td>
-      <td>''</td>
+      <td><a (click)="editPokemon(pokemon)">Editar</a></td>
     </tr>
   </tbody>
 </table>

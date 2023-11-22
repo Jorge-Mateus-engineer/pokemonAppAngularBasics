@@ -9,10 +9,15 @@ import { PokemonService } from '../services/pokemon.service';
 })
 export class ListPokemonsComponent implements OnInit {
   pokemonList: Pokemon[] = [];
+  pokemonEdit: Pokemon | null = null;
 
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit(): void {
     this.pokemonList = this.pokemonService.getPokemonList();
+  }
+
+  editPokemon(pokemonEdit: Pokemon) {
+    this.pokemonEdit = pokemonEdit;
   }
 }

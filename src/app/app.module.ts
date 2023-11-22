@@ -8,6 +8,8 @@ import { CreatePokemonComponent } from './create-pokemon/create-pokemon.componen
 import { FormsModule } from '@angular/forms';
 import { SharedTabsComponent } from './shared/shared-tabs/shared-tabs.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AlertWindowComponent } from './alert-window/alert-window.component';
+import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListPokemonsComponent,
     CreatePokemonComponent,
     SharedTabsComponent,
+    AlertWindowComponent,
+    EditPokemonComponent,
   ],
   imports: [
     BrowserModule,

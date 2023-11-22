@@ -5,11 +5,13 @@ import { Pokemon } from '../models/pokemon';
   providedIn: 'root',
 })
 export class PokemonService {
+  errorMessage: String = '';
+
   constructor() {
     this.initDB();
   }
 
-  private initDB(): void {
+  initDB(): void {
     if (this.getDB().length === 0) {
       this.saveList([
         { id: 1, name: 'Charmander', typeOfPokemon: 'Fuego', imgUrl: '' },
@@ -33,13 +35,54 @@ export class PokemonService {
     return pokemonArray;
   }
 
+  validatePokemon(pokemon: Pokemon): string[] {
+    const errores: string[] = [];
+    //1.Validar que no haya campos vacios
+    if (!pokemon.id || pokemon.id == 0) {
+      errores.push('Ingresa un ID, "0" no es un ID valido.');
+    }
+    if (pokemon.name === '') {
+      errores.push('¡Ingresa el nombre de tu Pókemon!');
+    }
+    if (pokemon.typeOfPokemon === '') {
+      errores.push('¡Ingresa el tipo de tu Pókemon!');
+    }
+    //2. Validar que el Id y nombre no existan
+    let currentPokemonArray = this.getDB();
+    const validationID = currentPokemonArray.some((p) => p.id === pokemon.id);
+    if (validationID) {
+      errores.push(`El ID ${pokemon.id} ya esta en uso, ingresa uno distinto`);
+    }
+    const validationName = currentPokemonArray.some(
+      (p) => p.name.toLowerCase() === pokemon.name.toLowerCase()
+    );
+    if (validationName) {
+      errores.push(`El Pokemon ${pokemon.name} ya está registrado.`);
+    }
+    return errores;
+  }
+
   getPokemonList(): Pokemon[] {
     return this.getDB();
   }
 
-  addPokemon(pokemon: Pokemon): void {
+  addPokemon(pokemon: Pokemon): string[] {
     let currentPokemonArray = this.getDB();
-    currentPokemonArray.push(pokemon);
-    this.saveList(currentPokemonArray);
+    if (this.validatePokemon(pokemon).length === 0) {
+      currentPokemonArray.push(pokemon);
+      this.saveList(currentPokemonArray);
+      return [];
+    }
+    return this.validatePokemon(pokemon);
+  }
+
+  updatePokemon(pokemonToUpdate: Pokemon): void {
+    let currentPokemonArray = this.getDB();
+    currentPokemonArray.forEach((p) => {
+      if (p.id === pokemonToUpdate.id) {
+        p = pokemonToUpdate;
+        this.saveList(currentPokemonArray);
+      }
+    });
   }
 }
