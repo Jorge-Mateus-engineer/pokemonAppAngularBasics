@@ -1,0 +1,28 @@
+<form>
+  <h2>¡Ingresa tu Pokemón a la lista!</h2>
+  <label>Id</label>
+  <input
+    type="text"
+    placeholder="1"
+    [(ngModel)]="pokemonChild.id"
+    name="idPokemon"
+    (ngModelChange)="pokemonChild.id = $event && +$event"
+  />
+  <label>Nombre de tu Pokemón</label>
+  <input
+    type="text"
+    placeholder="Charmander"
+    [(ngModel)]="pokemonChild.name"
+    name="nombrePokemon"
+  />
+  <label>Tipo del Pokemón</label>
+  <input
+    type="text"
+    placeholder="Fuego"
+    [(ngModel)]="pokemonChild.typeOfPokemon"
+    name="tipoPokemon"
+  />
+  <button (click)="pushToFather()">
+    {{ label }}
+  </button>
+</form>

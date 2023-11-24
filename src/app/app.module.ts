@@ -10,6 +10,7 @@ import { SharedTabsComponent } from './shared/shared-tabs/shared-tabs.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlertWindowComponent } from './alert-window/alert-window.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
+import { PokemonFormComponent } from './shared/pokemon-form/pokemon-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
     SharedTabsComponent,
     AlertWindowComponent,
     EditPokemonComponent,
+    PokemonFormComponent,
   ],
   imports: [
     BrowserModule,

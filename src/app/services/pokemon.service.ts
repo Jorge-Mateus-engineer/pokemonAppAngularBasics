@@ -78,9 +78,10 @@ export class PokemonService {
 
   updatePokemon(pokemonToUpdate: Pokemon): void {
     let currentPokemonArray = this.getDB();
-    currentPokemonArray.forEach((p) => {
+    debugger;
+    currentPokemonArray.forEach((p, index) => {
       if (p.id === pokemonToUpdate.id) {
-        p = pokemonToUpdate;
+        currentPokemonArray[index] = pokemonToUpdate;
         this.saveList(currentPokemonArray);
       }
     });

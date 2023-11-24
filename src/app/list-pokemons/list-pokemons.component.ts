@@ -10,6 +10,7 @@ import { PokemonService } from '../services/pokemon.service';
 export class ListPokemonsComponent implements OnInit {
   pokemonList: Pokemon[] = [];
   pokemonEdit: Pokemon | null = null;
+  parentLabel: string = 'Guardar';
 
   constructor(private pokemonService: PokemonService) {}
 

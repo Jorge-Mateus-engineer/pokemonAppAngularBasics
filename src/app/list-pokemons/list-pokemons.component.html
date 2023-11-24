@@ -1,5 +1,8 @@
 <div *ngIf="pokemonEdit != null">
-  <app-edit-pokemon [pokemonToEdit]="pokemonEdit"></app-edit-pokemon>
+  <app-edit-pokemon
+    [pokemonToEdit]="pokemonEdit"
+    [label]="parentLabel"
+  ></app-edit-pokemon>
 </div>
 
 <table>

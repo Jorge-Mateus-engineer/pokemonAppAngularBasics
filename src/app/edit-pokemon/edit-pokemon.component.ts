@@ -9,10 +9,14 @@ import { PokemonService } from '../services/pokemon.service';
   styleUrls: ['./edit-pokemon.component.css'],
 })
 export class EditPokemonComponent {
-  @Input()
-  pokemonToEdit: Pokemon = new Pokemon();
+  @Input() pokemonToEdit: Pokemon = new Pokemon();
+  @Input() label: string = '';
 
   constructor(private _router: Router, private pokemonService: PokemonService) {
     pokemonService.updatePokemon(this.pokemonToEdit);
+  }
+
+  recievePokemon(pokemon: Pokemon) {
+    this.pokemonService.updatePokemon(pokemon);
   }
 }

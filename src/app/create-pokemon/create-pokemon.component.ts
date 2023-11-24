@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Pokemon } from '../models/pokemon';
 import { PokemonService } from '../services/pokemon.service';
 import { trigger, transition, style, animate } from '@angular/animations';
@@ -17,19 +17,23 @@ import { Router } from '@angular/router';
       transition(':leave', [animate('300ms', style({ opacity: 0 }))]),
     ]),
   ],
+  encapsulation: ViewEncapsulation.None,
 })
 export class CreatePokemonComponent {
-  pokemon: Pokemon = new Pokemon();
+  //Este se enviara al child que lo recibe en @Input
+  pokemonParent: Pokemon = new Pokemon();
+  parentLabel: string = 'Crear Pokemon';
 
   constructor(private pokemonService: PokemonService, private router: Router) {}
 
   saveInfo(): void {
-    this.pokemonService.addPokemon(this.pokemon);
+    debugger;
+    this.pokemonService.addPokemon(this.pokemonParent);
     //No se deben usar metodos del Document, es un anti patron
     // document.querySelectorAll('input').forEach((input) => {
     //   input.value = '';
     // });
-    this.pokemon = new Pokemon();
+    this.pokemonParent = new Pokemon();
     this.navigateTo('/listPokemons');
     localStorage.setItem('activeIndex', JSON.stringify({ index: 0 }));
   }

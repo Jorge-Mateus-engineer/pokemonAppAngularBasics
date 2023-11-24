@@ -2,32 +2,11 @@
   <div class="img-container">
     <img src="../../assets/img/Pikachu.png" />
   </div>
-  <form>
-    <h2>¡Ingresa tu Pokemón a la lista!</h2>
-    <label>Id</label>
-    <input
-      type="text"
-      placeholder="1"
-      [(ngModel)]="pokemon.id"
-      name="idPokemon"
-      (ngModelChange)="pokemon.id = $event && +$event"
-    />
-    <label>Nombre de tu Pokemón</label>
-    <input
-      type="text"
-      placeholder="Charmander"
-      [(ngModel)]="pokemon.name"
-      name="nombrePokemon"
-    />
-    <label>Tipo del Pokemón</label>
-    <input
-      type="text"
-      placeholder="Fuego"
-      [(ngModel)]="pokemon.typeOfPokemon"
-      name="tipoPokemon"
-    />
-    <button (click)="saveInfo()" routerLink="listPokemons">
-      Crear Pokemon
-    </button>
-  </form>
+  <!-- 'con la notacion de [ ] se bindea la propiedad pokemonChild a el valor pokemonParent' -->
+  <app-pokemon-form
+    [pokemonChild]="pokemonParent"
+    [label]="parentLabel"
+    (addItem)="saveInfo()"
+    class="pokemon-form"
+  ></app-pokemon-form>
 </div>

@@ -1,26 +1,7 @@
-{{ pokemonToEdit.name }}
 <div *ngIf="pokemonToEdit != null">
-  <h2>Edita tu pokemon</h2>
-  <label>Id</label>
-  <input
-    type="text"
-    placeholder="1"
-    [(ngModel)]="pokemonToEdit.id"
-    name="idPokemon"
-  />
-  <label>Nombre de tu Pokemón</label>
-  <input
-    type="text"
-    placeholder="Charmander"
-    [(ngModel)]="pokemonToEdit.name"
-    name="nombrePokemon"
-  />
-  <label>Tipo del Pokemón</label>
-  <input
-    type="text"
-    placeholder="Fuego"
-    [(ngModel)]="pokemonToEdit.typeOfPokemon"
-    name="tipoPokemon"
-  />
-  <a>Guardar</a>
+  <app-pokemon-form
+    [pokemonChild]="pokemonToEdit"
+    [label]="label"
+    (addItem)="recievePokemon($event)"
+  ></app-pokemon-form>
 </div>
